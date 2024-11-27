@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LifeInvader - Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1 onclick="toMainPage()">SendIt</h1>
+        <div class="user-menu-nav">
+    </header>
+
+    <main class="main-container">
+        <section class="user-feed" id="main-section">
+            <h2>SendIt paqueterías: express que llegan hasta donde nadie más llega</h2>
+            <p>Porfavor llene cada de las entradas con sus datos correctos, puede regresar en cualquier momento a cualquier apartado dando click en el cada uno respectivamente</p>
+            <div class="quote-container" id="accordion">
+                <h3>1. Detalles del paquete</h3>
+                <div class="details-container">
+                    <div class="details">
+                        <label for="dimensiones">Dimensiones del paquete (ancho, altura, largura) </label>
+                        <input type="number" id="dimension-width" placeholder="cm" required>
+                        <input type="number" id="dimension-height" placeholder="cm" required>
+                        <input type="number" id="dimension-length" placeholder="cm" required>
+
+                        <label for="dimension-weight">Peso de su paquete (en kg)</label>
+                        <input type="number" id="dimension-weight" placeholder="kg"  max="69" required>
+
+
+                        <label for="detail-origin-zipcode">Ingrese codigo postal de origen.</label>
+                        <input type="text" id="detail-origin-zipcode" placeholder="ej: 24350" required>
+
+                        <label for="detail-destination-zipcode">Ingrese codigo postal de destinario.</label>
+                        <input type="text" id="detail-destination-zipcode" placeholder="ej: 24350" required>
+                    </div>
+                </div>
+                <h3>2. Opciones de envio</h3>
+                <div class="shipping-options-container">
+                    <div class="shipping-options">
+                        <h4>Selecciona el servicio de paqueteria preferida:</h4>
+                        <div class="options-selector">
+                            <select id="selector">
+                                <option value="">-- elige una opcion--</option>
+                                <option value="National-Express">National Express</option>
+                                <option value="FedEx">FedEx</option>
+                                <option value="Campeche-Envios-Express">Campeche Envios Express</option>
+                            </select>
+
+                            <div class="options-list" id="list">
+                                <ul id="National-Express">
+                                    <li>Nacional (todo el estado)</li>
+                                    <li>Peso máximo: 46 kg</li>
+                                    <li>Servicio Estándar (3-5 días): $800 MXN</li>
+                                </ul>
+                                <ul id="FedEx">
+                                    <li>Internacional</li>
+                                    <li>Peso máximo: 69 kg</li>
+                                    <li>Servicio Estándar (15-25 días): $1,200 MXN</li>
+                                </ul>
+                                <ul id="Campeche-Envios-Express">
+                                    <li>Local (Solo envios a estados alrededor de Campeche)</li>
+                                    <li>Peso máximo: 25 kg</li>
+                                    <li>Servicio Estándar (7 días): $300 MXN</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h3>3. Detalles de envio</h3>
+                <div class="address-details-container">
+                    <div class="address-details">
+                        <label for="sender">Nombre completo de remitente</label>
+                        <input type="text" id="sender" placeholder="Remitente" required>
+
+                        <label for="recipient">Nombre completo de destinario</label>
+                        <input type="text" id="recipient" placeholder="Destinario" required>
+
+                        <label for="address">Dirección completa del destinario</label>
+                        <input type="text" id="address" placeholder="Dirección" required>
+
+                        <label for="cellphone_number">Numero telefónico del destinario (incluir código de país) </label>
+                        <input type="tel" id="cellphone_number" placeholder="Celular" required>
+
+                        <label for="email">Correo electrónico a donde se enviarán actualizaciones de envío</label>
+                        <input type= "email" id="email" placeholder="@" required>
+
+                        <label for="Referencia">Incluir referencias destinario (opcional) Max: 120</label>
+                        <textarea name="referencias" id="reference" cols="60" rows="4" maxlength="120"></textarea>
+                    </div>
+
+                    
+                    <button id="confirm-details">Confirm TODO</button>
+                    <p>¡ATENCIÓN!</p>
+                    <p>Al hacer clic en este botón se generará un resumen de su paquete. Rellene todos los campos necesarios antes de confirmar la información del paquete.</p>
+                    <p>NO SE PODRA CORREGIR LOS CAMBIOS UNA VEZ QUE LE DE CLIC A "Confirmar TODO".</p>
+                </div>
+        </section>
+        <button id="send-package">Send It!</button>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>About Us</h4>
+                <p> </p>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p>Email: support@senditsupport.com</p>
+                <p>Phone: +123 456 7890</p>
+                <p>Address: calle 41 x 48 Col. Ricardo Flores Magon, Escarcega, Campeche, MX</p>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <ul class="social-links">
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2024 SendIt. All Rights Reserved.
+        </div>
+    </footer>
+
+</body>
+<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+<script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+<script src="scripts.js"></script>
+
+</html>
