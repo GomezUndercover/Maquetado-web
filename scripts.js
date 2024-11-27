@@ -1,11 +1,3 @@
-// function showChat() {
-//     var x = document.getElementById("chat");
-//     if (x.style.display === "none") {
-//         x.style.display = "block";
-//     } else {
-//         x.style.display = "none";
-//     }
-// }
 var pckgWidth
 var pckgHeight
 var packLength
@@ -18,9 +10,6 @@ var address
 var cellphone
 var email
 var reference
-
-// // inputs boolean check
-// var isEnabled = true
 
 function saveSendDetails() {
     pckgWidth = $('#dimension-width').val()
@@ -35,29 +24,6 @@ function saveSendDetails() {
     cellphone = $('#cellphone_number').val()
     email = $('#email').val()
     reference = $('#reference').val() || "n/a"
-}
-
-function detailsInputEnabler() {
-    if (isEnabled) {
-        $('input').prop('disabled', true)
-        isEnabled = false
-    } else {
-        $('input').prop('disabled', false)
-        isEnabled = true
-    }
-}
-
-function checkInputs() {
-    var isValid = true
-    $('input').filter('[required]').each(function () {
-        if ($(this).val() === '') {
-            $('#confirm-details').prop('disabled', true)
-            isValid = false
-            return false
-        }
-    });
-    if (isValid) { $('#confirm-details').prop('disabled', false) }
-    return isValid
 }
 
 function generateSummary() {
