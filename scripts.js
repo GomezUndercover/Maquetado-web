@@ -29,16 +29,16 @@ function saveSendDetails() {
 function generateSummary() {
     let summary = `
         <h4>Shipping Summary</h3>
-        <p><strong>Sender Name:</strong> ${senderName}</p>
-        <p><strong>Recipient Name:</strong> ${recipientName}</p>
-        <p><strong>Sender Zip Code:</strong> ${srcZipCode}</p>
-        <p><strong>Destination Zip Code:</strong> ${destZipCode}</p>
-        <p><strong>Address:</strong> ${address}</p>
-        <p><strong>Cellphone:</strong> ${cellphone}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Package Dimensions (W x H x L):</strong> ${pckgWidth} x ${pckgHeight} x ${packLength}</p>
-        <p><strong>Service:</strong> ${packageService}</p>
-        <p><strong>Reference:</strong> ${reference}</p>`
+        <p><strong>Nombre de remitente:</strong> ${senderName}</p>
+        <p><strong>Nombre de destinario:</strong> ${recipientName}</p>
+        <p><strong>Codigo postal de origen:</strong> ${srcZipCode}</p>
+        <p><strong>Código postal de destino</strong> ${destZipCode}</p>
+        <p><strong>Dirección:</strong> ${address}</p>
+        <p><strong>Número telefónico:</strong> ${cellphone}</p>
+        <p><strong>Correo electrónico:</strong> ${email}</p>
+        <p><strong>Dimensiones de paquete (W x H x L):</strong> ${pckgWidth} x ${pckgHeight} x ${packLength}</p>
+        <p><strong>Servicio:</strong> ${packageService}</p>
+        <p><strong>Referencia:</strong> ${reference}</p>`
 
     // se agrega el div creado a la seccion y se activa boton de enviar
     let summaryDiv = $('<div>').attr('id', 'summaryDiv').html(summary)
@@ -48,10 +48,6 @@ function generateSummary() {
     })
 }
 
-
-function createSummaryDiv() {
-
-}
 
 $(function () {
     $("#accordion").accordion({
@@ -78,7 +74,7 @@ $(function () {
         $('#send-package').show()
     });
 
-    $('#send-package').on('click', function(){
+    $('#send-package').on('click', function () {
         window.location.href = 'package_sent.html';
     })
 
